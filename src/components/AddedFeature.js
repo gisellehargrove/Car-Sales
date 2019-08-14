@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 const AddedFeature = props => {
   return (
@@ -9,13 +8,6 @@ const AddedFeature = props => {
       {props.feature.name}
     </li>
   );
-};
-
-const mapStateToProps = state => {
-  console.log(state, 'addedFeature state');
-  return {
-    feature: state.car.features
-  }
 };
 
 export default AddedFeature;
