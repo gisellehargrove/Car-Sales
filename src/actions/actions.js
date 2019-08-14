@@ -1,5 +1,5 @@
 export const addFeature = feature => {
-  console.log('buyItem invoked');
+  console.log('addFeature invoked', feature);
   return {
     type: 'ADD_FEATURE',
     payload: feature

@@ -20,7 +20,7 @@ const removeFeature = id => {
 };
 
 export const reducer = (state = initialState, action) => {
-  console.log(action)
+  if(action.payload) console.log(action.payload.price, 'current reducer state')
   switch(action.type) {
     case 'REMOVE_FEATURE':
       return {
@@ -29,6 +29,7 @@ export const reducer = (state = initialState, action) => {
     case 'ADD_FEATURE':
       return {
         ...state,
+        additionalPrice: state.additionalPrice += action.payload.price,
         car: {
           ...state.car,
           features: [...state.car.features, action.payload]
